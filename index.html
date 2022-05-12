@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="esp">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Encriptador</title>
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+	</head>
+	<body>
+		<header>
+			<h1><img src="imagenes/logo.png"></h1>
+		</header>
+
+		<main>
+			<section class="sec-entrada">
+				<textarea type="text" id = "ingreso" class="text-ingreso" placeholder="Ingese el texto aqui" autofocus pattern="[a-z]"></textarea>
+				<div class="cont-h6">
+					<h6> <img src="imagenes/signo-de-exclamacion-en-un-circulo.png" class="signo"> Solo letras minúsculas y sin acentos</h6>
+				</div>
+				<div class="contenedor-botones">
+					<button class = "btn-encriptar" id = "boton-encriptar" onclick="btencriptar()" >Encriptar</button>
+					<button class = "btn-desencriptar" id = "boton-desencriptar" onclick="btdesencriptar()">Desencriptar</button>
+				</div>
+			</section>
+	
+			
+			
+			<section id="visible" class="sec-salida"  >
+				<div class="contenedor-imagen">
+					<img src="imagenes/Muñeco.png" class="munieco" alt="Munieco de encriptador ">
+				</div>
+			  
+				<div class="contenedor-bajo-imagen">
+					<h3 class = "bajo-imagen-h3">Ningún mensaje fue encontrado</h3>
+					<p class = "bajo-imagen-p">Ingresa el texto que desees encriptar o desencriptar.</p>
+				</div>
+			</section>
+
+			<section id="oculto" class="sec-salida"   style="display:none" >
+				<div contenteditable class="div-resultado" id = "resultado" ></div>
+				<button class="btn-copiar" id = "copiar" onclick="copiar()">Copiar</button>
+				<br>
+				<br>
+				<br>
+			</section>
+		</main>
+
+		<footer>
+			Sistema desarrollado por Agustin Fasciglione estudiante de Alura
+		</footer>
+	</body>
+</html>
+
+<script src = "principal.js"> </script>
